@@ -66,11 +66,22 @@
     <Reference Include="UIAutomationTypes" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="ChangedPassword.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ChangedPassword.Designer.cs">
+      <DependentUpon>ChangedPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MVVMLoginDbDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MVVMLoginDbDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUp.Designer.cs">
+      <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -96,8 +107,11 @@
     <Compile Include="UserData.Designer.cs">
       <DependentUpon>UserData.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="ChangedPassword.resx">
+      <DependentUpon>ChangedPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUp.resx">
+      <DependentUpon>SignUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -136,6 +150,17 @@
     </None>
     <None Include="MVVMLoginDbDataSet1.xss">
       <DependentUpon>MVVMLoginDbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="MVVMLoginDbDataSet2.xsc">
+      <DependentUpon>MVVMLoginDbDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="MVVMLoginDbDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MVVMLoginDbDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MVVMLoginDbDataSet2.xss">
+      <DependentUpon>MVVMLoginDbDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

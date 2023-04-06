@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class Form1
+    partial class SignUp
     {
         /// <summary>
         /// Required designer variable.
@@ -101,6 +101,7 @@
             this.ultraButton2.Size = new System.Drawing.Size(115, 23);
             this.ultraButton2.TabIndex = 9;
             this.ultraButton2.Text = "Clear";
+            this.ultraButton2.Click += new System.EventHandler(this.ultraButton2_Click);
             // 
             // ultraButton3
             // 
@@ -125,12 +126,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.Location = new System.Drawing.Point(346, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 29);
+            this.label1.Size = new System.Drawing.Size(125, 33);
             this.label1.TabIndex = 12;
-            this.label1.Text = "Sign In";
+            this.label1.Text = "Sign Up";
             // 
             // ultraTextEditor1
             // 
@@ -166,7 +167,6 @@
             // 
             this.ultraTextEditor5.Location = new System.Drawing.Point(483, 192);
             this.ultraTextEditor5.Name = "ultraTextEditor5";
-            this.ultraTextEditor5.PasswordChar = '*';
             this.ultraTextEditor5.Size = new System.Drawing.Size(219, 24);
             this.ultraTextEditor5.TabIndex = 25;
             // 
@@ -174,7 +174,6 @@
             // 
             this.ultraTextEditor6.Location = new System.Drawing.Point(483, 265);
             this.ultraTextEditor6.Name = "ultraTextEditor6";
-            this.ultraTextEditor6.PasswordChar = '*';
             this.ultraTextEditor6.Size = new System.Drawing.Size(219, 24);
             this.ultraTextEditor6.TabIndex = 24;
             // 
@@ -208,7 +207,7 @@
             this.ultraFormattedLinkLabel7.TabStop = true;
             this.ultraFormattedLinkLabel7.Value = "Lastname :";
             // 
-            // Form1
+            // SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -233,7 +232,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Form1";
+            this.Name = "SignUp";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.ultraTextEditor1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ultraTextEditor2)).EndInit();

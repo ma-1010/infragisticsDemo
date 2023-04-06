@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
             this.ultraPictureBox2 = new Infragistics.Win.UltraWinEditors.UltraPictureBox();
             this.ultraPictureBox1 = new Infragistics.Win.UltraWinEditors.UltraPictureBox();
             this.ultraFormattedLinkLabel2 = new Infragistics.Win.FormattedLinkLabel.UltraFormattedLinkLabel();
@@ -37,6 +38,8 @@
             this.ultraButton3 = new Infragistics.Win.Misc.UltraButton();
             this.ultraTextEditor1 = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             this.ultraTextEditor2 = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
+            this.ultraLabel1 = new Infragistics.Win.Misc.UltraLabel();
+            this.ultraFormattedLinkLabel3 = new Infragistics.Win.FormattedLinkLabel.UltraFormattedLinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.ultraTextEditor1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ultraTextEditor2)).BeginInit();
             this.SuspendLayout();
@@ -90,10 +93,10 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(368, 45);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Location = new System.Drawing.Point(342, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 34);
+            this.label1.Size = new System.Drawing.Size(127, 43);
             this.label1.TabIndex = 14;
             this.label1.Text = "Log In";
             // 
@@ -122,11 +125,33 @@
             this.ultraTextEditor2.Size = new System.Drawing.Size(212, 21);
             this.ultraTextEditor2.TabIndex = 18;
             // 
+            // ultraLabel1
+            // 
+            this.ultraLabel1.Location = new System.Drawing.Point(290, 394);
+            this.ultraLabel1.Name = "ultraLabel1";
+            this.ultraLabel1.Size = new System.Drawing.Size(100, 23);
+            this.ultraLabel1.TabIndex = 19;
+            this.ultraLabel1.Text = "Forgot password ? ";
+            // 
+            // ultraFormattedLinkLabel3
+            // 
+            appearance1.ForeColor = System.Drawing.Color.Blue;
+            this.ultraFormattedLinkLabel3.Appearance = appearance1;
+            this.ultraFormattedLinkLabel3.Location = new System.Drawing.Point(396, 394);
+            this.ultraFormattedLinkLabel3.Name = "ultraFormattedLinkLabel3";
+            this.ultraFormattedLinkLabel3.Size = new System.Drawing.Size(130, 23);
+            this.ultraFormattedLinkLabel3.TabIndex = 20;
+            this.ultraFormattedLinkLabel3.TabStop = true;
+            this.ultraFormattedLinkLabel3.Value = "Clicked Here";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ultraFormattedLinkLabel3);
+            this.Controls.Add(this.ultraLabel1);
             this.Controls.Add(this.ultraTextEditor2);
             this.Controls.Add(this.ultraTextEditor1);
             this.Controls.Add(this.ultraButton3);
@@ -138,7 +163,6 @@
             this.Controls.Add(this.ultraButton1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "Login";
-            this.RightToLeftLayout = true;
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.ultraTextEditor1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ultraTextEditor2)).EndInit();
@@ -158,5 +182,7 @@
         private Infragistics.Win.Misc.UltraButton ultraButton3;
         private Infragistics.Win.UltraWinEditors.UltraTextEditor ultraTextEditor1;
         private Infragistics.Win.UltraWinEditors.UltraTextEditor ultraTextEditor2;
+        private Infragistics.Win.Misc.UltraLabel ultraLabel1;
+        private Infragistics.Win.FormattedLinkLabel.UltraFormattedLinkLabel ultraFormattedLinkLabel3;
     }
 }

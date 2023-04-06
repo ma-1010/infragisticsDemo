@@ -31,12 +31,13 @@
             this.components = new System.ComponentModel.Container();
             Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand1 = new Infragistics.Win.UltraWinGrid.UltraGridBand("User", -1);
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn1 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Id");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn2 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("UserName");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn3 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Password");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn4 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Name");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn5 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("LastName");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn6 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Email");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn13 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Id");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn14 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("UserName");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn15 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Password");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn16 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Name");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn17 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("LastName", -1, null, 0, Infragistics.Win.UltraWinGrid.SortIndicator.Ascending, false);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn18 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Email");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn19 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Datetime");
             Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
@@ -48,28 +49,22 @@
             Infragistics.Win.Appearance appearance10 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance11 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance12 = new Infragistics.Win.Appearance();
-            this.mVVMLoginDbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.mVVMLoginDbDataSet = new WindowsFormsApp1.MVVMLoginDbDataSet();
+            Infragistics.Win.Appearance appearance13 = new Infragistics.Win.Appearance();
             this.ultraGrid1 = new Infragistics.Win.UltraWinGrid.UltraGrid();
+            this.mVVMLoginDbDataSet = new WindowsFormsApp1.MVVMLoginDbDataSet();
+            this.mVVMLoginDbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mVVMLoginDbDataSet2 = new WindowsFormsApp1.MVVMLoginDbDataSet2();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.userTableAdapter = new WindowsFormsApp1.MVVMLoginDbDataSetTableAdapters.UserTableAdapter();
+            this.userTableAdapter = new WindowsFormsApp1.MVVMLoginDbDataSet2TableAdapters.UserTableAdapter();
             this.ultraGridExcelExporter1 = new Infragistics.Win.UltraWinGrid.ExcelExport.UltraGridExcelExporter(this.components);
             this.ultraButton1 = new Infragistics.Win.Misc.UltraButton();
-            ((System.ComponentModel.ISupportInitialize)(this.mVVMLoginDbDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mVVMLoginDbDataSet)).BeginInit();
+            this.ultraButton2 = new Infragistics.Win.Misc.UltraButton();
             ((System.ComponentModel.ISupportInitialize)(this.ultraGrid1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mVVMLoginDbDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mVVMLoginDbDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mVVMLoginDbDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // mVVMLoginDbDataSetBindingSource
-            // 
-            this.mVVMLoginDbDataSetBindingSource.DataSource = this.mVVMLoginDbDataSet;
-            this.mVVMLoginDbDataSetBindingSource.Position = 0;
-            // 
-            // mVVMLoginDbDataSet
-            // 
-            this.mVVMLoginDbDataSet.DataSetName = "MVVMLoginDbDataSet";
-            this.mVVMLoginDbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // ultraGrid1
             // 
@@ -78,24 +73,28 @@
             appearance1.BorderColor = System.Drawing.SystemColors.InactiveCaption;
             this.ultraGrid1.DisplayLayout.Appearance = appearance1;
             this.ultraGrid1.DisplayLayout.AutoFitStyle = Infragistics.Win.UltraWinGrid.AutoFitStyle.ExtendLastColumn;
-            ultraGridColumn1.Header.VisiblePosition = 0;
-            ultraGridColumn1.Width = 184;
-            ultraGridColumn2.Header.VisiblePosition = 1;
-            ultraGridColumn2.Width = 144;
-            ultraGridColumn3.Header.VisiblePosition = 2;
-            ultraGridColumn3.Hidden = true;
-            ultraGridColumn4.Header.VisiblePosition = 3;
-            ultraGridColumn4.Width = 176;
-            ultraGridColumn5.Header.VisiblePosition = 4;
-            ultraGridColumn5.Width = 175;
-            ultraGridColumn6.Header.VisiblePosition = 5;
+            ultraGridColumn13.Header.VisiblePosition = 0;
+            ultraGridColumn13.Hidden = true;
+            ultraGridColumn14.Header.VisiblePosition = 1;
+            ultraGridColumn14.Width = 166;
+            ultraGridColumn15.Header.VisiblePosition = 2;
+            ultraGridColumn15.Hidden = true;
+            ultraGridColumn16.Header.VisiblePosition = 3;
+            ultraGridColumn16.Width = 170;
+            ultraGridColumn17.Header.VisiblePosition = 4;
+            ultraGridColumn17.Width = 182;
+            ultraGridColumn18.Header.VisiblePosition = 6;
+            ultraGridColumn18.Width = 142;
+            ultraGridColumn19.Header.VisiblePosition = 5;
+            ultraGridColumn19.Width = 87;
             ultraGridBand1.Columns.AddRange(new object[] {
-            ultraGridColumn1,
-            ultraGridColumn2,
-            ultraGridColumn3,
-            ultraGridColumn4,
-            ultraGridColumn5,
-            ultraGridColumn6});
+            ultraGridColumn13,
+            ultraGridColumn14,
+            ultraGridColumn15,
+            ultraGridColumn16,
+            ultraGridColumn17,
+            ultraGridColumn18,
+            ultraGridColumn19});
             this.ultraGrid1.DisplayLayout.BandsSerializer.Add(ultraGridBand1);
             this.ultraGrid1.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
             this.ultraGrid1.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.False;
@@ -148,6 +147,7 @@
             this.ultraGrid1.DisplayLayout.ScrollBounds = Infragistics.Win.UltraWinGrid.ScrollBounds.ScrollToFill;
             this.ultraGrid1.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate;
             this.ultraGrid1.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy;
+            this.ultraGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ultraGrid1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.ultraGrid1.Location = new System.Drawing.Point(0, 0);
             this.ultraGrid1.Name = "ultraGrid1";
@@ -155,10 +155,25 @@
             this.ultraGrid1.TabIndex = 0;
             this.ultraGrid1.Text = "ultraGrid1";
             // 
+            // mVVMLoginDbDataSet
+            // 
+            this.mVVMLoginDbDataSet.DataSetName = "MVVMLoginDbDataSet";
+            this.mVVMLoginDbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // mVVMLoginDbDataSetBindingSource
+            // 
+            this.mVVMLoginDbDataSetBindingSource.DataSource = this.mVVMLoginDbDataSet;
+            this.mVVMLoginDbDataSetBindingSource.Position = 0;
+            // 
+            // mVVMLoginDbDataSet2
+            // 
+            this.mVVMLoginDbDataSet2.DataSetName = "MVVMLoginDbDataSet2";
+            this.mVVMLoginDbDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // userBindingSource
             // 
             this.userBindingSource.DataMember = "User";
-            this.userBindingSource.DataSource = this.mVVMLoginDbDataSetBindingSource;
+            this.userBindingSource.DataSource = this.mVVMLoginDbDataSet2;
             // 
             // userTableAdapter
             // 
@@ -166,38 +181,58 @@
             // 
             // ultraButton1
             // 
-            this.ultraButton1.Location = new System.Drawing.Point(313, 8);
+            this.ultraButton1.Location = new System.Drawing.Point(311, 8);
             this.ultraButton1.Name = "ultraButton1";
             this.ultraButton1.Size = new System.Drawing.Size(75, 23);
             this.ultraButton1.TabIndex = 1;
             this.ultraButton1.Text = "Export";
-            this.ultraButton1.Click += new System.EventHandler(this.ultraButton1_Click);
+            this.ultraButton1.Click += new System.EventHandler(this.ultraButton1_Click_1);
+            // 
+            // ultraButton2
+            // 
+            appearance13.BackColor = System.Drawing.Color.Blue;
+            appearance13.BackColor2 = System.Drawing.Color.Blue;
+            appearance13.BackColorDisabled = System.Drawing.Color.Transparent;
+            appearance13.BackColorDisabled2 = System.Drawing.Color.Transparent;
+            appearance13.ForeColor = System.Drawing.Color.Red;
+            this.ultraButton2.Appearance = appearance13;
+            this.ultraButton2.Location = new System.Drawing.Point(959, 8);
+            this.ultraButton2.Name = "ultraButton2";
+            this.ultraButton2.Size = new System.Drawing.Size(114, 23);
+            this.ultraButton2.TabIndex = 2;
+            this.ultraButton2.Text = "Changed Password";
+            this.ultraButton2.Click += new System.EventHandler(this.ultraButton2_Click);
             // 
             // UserData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1085, 474);
+            this.Controls.Add(this.ultraButton2);
             this.Controls.Add(this.ultraButton1);
             this.Controls.Add(this.ultraGrid1);
             this.Name = "UserData";
             this.Text = "UserData";
             this.Load += new System.EventHandler(this.UserData_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.mVVMLoginDbDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mVVMLoginDbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ultraGrid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mVVMLoginDbDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mVVMLoginDbDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mVVMLoginDbDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.BindingSource mVVMLoginDbDataSetBindingSource;
-        private MVVMLoginDbDataSet mVVMLoginDbDataSet;
+
         private Infragistics.Win.UltraWinGrid.UltraGrid ultraGrid1;
+        private MVVMLoginDbDataSet mVVMLoginDbDataSet;
+        private System.Windows.Forms.BindingSource mVVMLoginDbDataSetBindingSource;
+        private MVVMLoginDbDataSet2 mVVMLoginDbDataSet2;
         private System.Windows.Forms.BindingSource userBindingSource;
-        private MVVMLoginDbDataSetTableAdapters.UserTableAdapter userTableAdapter;
+        private MVVMLoginDbDataSet2TableAdapters.UserTableAdapter userTableAdapter;
         private Infragistics.Win.UltraWinGrid.ExcelExport.UltraGridExcelExporter ultraGridExcelExporter1;
         private Infragistics.Win.Misc.UltraButton ultraButton1;
+        private Infragistics.Win.Misc.UltraButton ultraButton2;
     }
 }

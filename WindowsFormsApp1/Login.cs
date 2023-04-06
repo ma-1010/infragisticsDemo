@@ -11,7 +11,33 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-
+        string salt = "huy123456";
+        //private static bool MatchSHA1(byte[] p1, byte[] p2)
+        //{
+        //    bool result = false;
+        //    if (p1 != null && p2 != null)
+        //    {s
+        //        if (p1.Length == p2.Length)
+        //        {
+        //            result = true;
+        //            for (int i = 0; i < p1.Length; i++)
+        //            {
+        //                if (p1[i] != p2[i])
+        //                {
+        //                    result = false;
+        //                    break;
+        //                }
+        //            }
+        //        }
+        //    }
+        //    return result;
+        //}
+        public static string sha256(string pw, string salt)
+        {
+            System.Security.Cryptography.SHA256Managed sha256 = new System.Security.Cryptography.SHA256Managed();
+            byte[] hash = sha256.ComputeHash(System.Text.Encoding.UTF8.GetBytes(pw + salt));
+            return Convert.ToBase64String(hash);
+        }
         private void ultraButton1_Click(object sender, EventArgs e)
         {
             //check user or password it empty or not
@@ -32,7 +58,7 @@ namespace WindowsFormsApp1
                     SqlCommand cmd = new SqlCommand("select *from [User] where username=@username and password=@password", conn);
                     //set @ to the texteditor
                     cmd.Parameters.AddWithValue("@username", ultraTextEditor1.Text);
-                    cmd.Parameters.AddWithValue("@password", ultraTextEditor2.Text);
+                    cmd.Parameters.AddWithValue("@password", sha256(ultraTextEditor2.Text,salt));
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     DataTable dataTable = new DataTable();
 
@@ -57,7 +83,7 @@ namespace WindowsFormsApp1
         //go to sign up page
         private void ultraButton3_Click(object sender, EventArgs e)
         {
-            new Form1().Show();
+            new SignUp().Show();
             this.Hide();
         }
 

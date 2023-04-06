@@ -3,16 +3,24 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Windows.Forms;
 using Infragistics.Win.UltraWinEditors;
+using System.Text;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form1 : Form
+    public partial class SignUp : Form
     {
-
-        public Form1()
+    string salt = "huy123456";
+        public SignUp()
         {
             InitializeComponent();
 
+        }
+
+        public static string sha256(string pw, string salt)
+        {
+            System.Security.Cryptography.SHA256Managed sha256 = new System.Security.Cryptography.SHA256Managed();
+            byte[] hash = sha256.ComputeHash(System.Text.Encoding.UTF8.GetBytes(pw + salt));
+            return Convert.ToBase64String(hash);
         }
         //move to login page
         private void ultraButton3_Click(object sender, EventArgs e)
@@ -95,12 +103,12 @@ namespace WindowsFormsApp1
             {
                 string sql = string.Empty;
                 //sql command
-                sql += "INSERT INTO [User] ([UserName],[Password],[Name],[LastName],[Email])";
-                sql += "VALUES(@username, @password,@name,@lastname,@email)";
+                sql += "INSERT INTO [User] ([UserName],[Password],[Name],[LastName],[Email],[Datetime])";
+                sql += "VALUES(@username, @password,@name,@lastname,@email,CURRENT_TIMESTAMP)";
                 conn.Open();
                 SqlCommand cmd2 =new SqlCommand(sql, conn);
                 cmd2.Parameters.AddWithValue("@username", ultraTextEditor3.Text);
-                cmd2.Parameters.AddWithValue("@password", ultraTextEditor1.Text);
+                cmd2.Parameters.AddWithValue("@password", sha256(ultraTextEditor1.Text,salt));
                 cmd2.Parameters.AddWithValue("@name", ultraTextEditor5.Text);
                 cmd2.Parameters.AddWithValue("@lastname", ultraTextEditor4.Text);
                 cmd2.Parameters.AddWithValue("@email", ultraTextEditor6.Text);
@@ -109,5 +117,15 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void ultraButton2_Click(object sender, EventArgs e)
+        {
+            ultraTextEditor1.Clear();
+            ultraTextEditor2.Clear();
+            ultraTextEditor3.Clear();
+            ultraTextEditor4.Clear();
+            ultraTextEditor5.Clear();
+            ultraTextEditor6.Clear();
+
+        }
     }
 }
