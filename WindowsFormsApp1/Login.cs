@@ -12,7 +12,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-        string[] salt = File.ReadAllLines(@"C:\Users\ADMIN\Downloads\test.txt");
+        string[] salt = File.ReadAllLines(@"C:\Users\ADMIN\Downloads\test.txt");// edit the path of the salt file in the database file to where you put it
 
         //private static bool MatchSHA1(byte[] p1, byte[] p2)
         //{
