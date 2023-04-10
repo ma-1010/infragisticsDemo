@@ -104,8 +104,8 @@ namespace WindowsFormsApp1
             {
                 string sql = string.Empty;
                 //sql command
-                sql += "INSERT INTO [User] ([UserName],[Password],[Name],[LastName],[Email],[Datetime])";
-                sql += "VALUES(@username, @password,@name,@lastname,@email,CURRENT_TIMESTAMP)";
+                sql += "INSERT INTO [User] ([UserName],[Password],[Name],[LastName],[Email],[Datetime],[Role])";
+                sql += "VALUES(@username, @password,@name,@lastname,@email,CURRENT_TIMESTAMP,'0')";
                 conn.Open();
                 SqlCommand cmd2 =new SqlCommand(sql, conn);
                 cmd2.Parameters.AddWithValue("@username", ultraTextEditor3.Text);

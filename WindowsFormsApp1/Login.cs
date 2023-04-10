@@ -71,7 +71,7 @@ namespace WindowsFormsApp1
                     if (dataTable.Rows.Count > 0)
                     {
                         this.Hide();
-                        Form ud = new UserData(dataTable.Rows[0][0].ToString(), dataTable.Rows[0][1].ToString(), dataTable.Rows[0][2].ToString(), dataTable.Rows[0][3].ToString(), dataTable.Rows[0][6].ToString());
+                        Form ud = new UserData(dataTable.Rows[0][1].ToString(), dataTable.Rows[0][2].ToString(), dataTable.Rows[0][3].ToString(), dataTable.Rows[0][4].ToString(), dataTable.Rows[0][5].ToString(), dataTable.Rows[0][6].ToString(), dataTable.Rows[0][7].ToString());
                         ud.Show();
                     }
                     else

@@ -55,7 +55,10 @@
     <Reference Include="Infragistics4.Documents.IO.v22.2, Version=22.2.20222.49, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
     <Reference Include="Infragistics4.Documents.Reports.v22.2, Version=22.2.20222.49, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
     <Reference Include="Infragistics4.Shared.v22.2, Version=22.2.20222.49, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics4.Win.DataVisualization.Shared.v22.2, Version=22.2.20222.49, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics4.Win.DataVisualization.UltraGauges.v22.2, Version=22.2.20222.49, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
     <Reference Include="Infragistics4.Win.Misc.v22.2, Version=22.2.20222.49, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.Portable.Core.v22.2, Version=22.2.20222.49, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
     <Reference Include="Infragistics4.Win.SupportDialogs.v22.2, Version=22.2.20222.49, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
     <Reference Include="Infragistics4.Win.UltraWinCalcManager.v22.2.FormulaBuilder, Version=22.2.20222.49, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
     <Reference Include="Infragistics4.Win.UltraWinDataSource.v22.2, Version=22.2.20222.49, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
@@ -103,12 +106,6 @@
     </Compile>
     <Compile Include="Delete.Designer.cs">
       <DependentUpon>Delete.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Modify.cs">
       <SubType>Form</SubType>
@@ -160,8 +157,8 @@
     <EmbeddedResource Include="ChangedPassword.resx">
       <DependentUpon>ChangedPassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Delete.resx">
+      <DependentUpon>Delete.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modify.resx">
       <DependentUpon>Modify.cs</DependentUpon>

@@ -72,7 +72,6 @@ namespace WindowsFormsApp1
                 TextClear();
                 return false;
             }
-
             if (ultraTextEditor1.Text != ultraTextEditor2.Text)
             {
                 MessageBox.Show("The Password and Comfirm Password do not match", "Caption", btn, icon);
