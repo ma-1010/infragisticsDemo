@@ -10,7 +10,8 @@ namespace WindowsFormsApp1
 {
     public partial class SignUp : Form
     {
-        string[] salt = File.ReadAllLines(@"C:\Users\ADMIN\Downloads\test.txt");
+        string[] salt = File.ReadAllLines(@"C:\Users\ADMIN\Downloads\test.txt");// edit the path of the salt file in the database file to where you put it
+
         public SignUp()
         {
             InitializeComponent();
