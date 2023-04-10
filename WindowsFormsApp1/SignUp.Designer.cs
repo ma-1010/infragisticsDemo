@@ -89,9 +89,10 @@
             this.ultraButton1.Margin = new System.Windows.Forms.Padding(4);
             this.ultraButton1.Name = "ultraButton1";
             this.ultraButton1.Size = new System.Drawing.Size(115, 35);
-            this.ultraButton1.TabIndex = 8;
+            this.ultraButton1.TabIndex = 19;
             this.ultraButton1.Text = "Create";
             this.ultraButton1.Click += new System.EventHandler(this.ultraButton1_Click);
+            this.ultraButton1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ultraButton1_KeyDown);
             // 
             // ultraButton2
             // 
@@ -99,7 +100,7 @@
             this.ultraButton2.Margin = new System.Windows.Forms.Padding(4);
             this.ultraButton2.Name = "ultraButton2";
             this.ultraButton2.Size = new System.Drawing.Size(115, 23);
-            this.ultraButton2.TabIndex = 9;
+            this.ultraButton2.TabIndex = 20;
             this.ultraButton2.Text = "Clear";
             this.ultraButton2.Click += new System.EventHandler(this.ultraButton2_Click);
             // 
@@ -109,9 +110,10 @@
             this.ultraButton3.Margin = new System.Windows.Forms.Padding(4);
             this.ultraButton3.Name = "ultraButton3";
             this.ultraButton3.Size = new System.Drawing.Size(100, 28);
-            this.ultraButton3.TabIndex = 10;
+            this.ultraButton3.TabIndex = 21;
             this.ultraButton3.Text = "Login";
             this.ultraButton3.Click += new System.EventHandler(this.ultraButton3_Click);
+            this.ultraButton3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ultraButton3_KeyDown);
             // 
             // ultraFormattedLinkLabel4
             // 
@@ -139,7 +141,8 @@
             this.ultraTextEditor1.Name = "ultraTextEditor1";
             this.ultraTextEditor1.PasswordChar = '*';
             this.ultraTextEditor1.Size = new System.Drawing.Size(219, 24);
-            this.ultraTextEditor1.TabIndex = 18;
+            this.ultraTextEditor1.TabIndex = 14;
+            this.ultraTextEditor1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ultraTextEditor1_KeyDown);
             // 
             // ultraTextEditor2
             // 
@@ -147,35 +150,40 @@
             this.ultraTextEditor2.Name = "ultraTextEditor2";
             this.ultraTextEditor2.PasswordChar = '*';
             this.ultraTextEditor2.Size = new System.Drawing.Size(219, 24);
-            this.ultraTextEditor2.TabIndex = 19;
+            this.ultraTextEditor2.TabIndex = 15;
+            this.ultraTextEditor2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ultraTextEditor2_KeyDown);
             // 
             // ultraTextEditor3
             // 
             this.ultraTextEditor3.Location = new System.Drawing.Point(160, 119);
             this.ultraTextEditor3.Name = "ultraTextEditor3";
             this.ultraTextEditor3.Size = new System.Drawing.Size(219, 24);
-            this.ultraTextEditor3.TabIndex = 20;
+            this.ultraTextEditor3.TabIndex = 13;
+            this.ultraTextEditor3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ultraTextEditor3_KeyDown);
             // 
             // ultraTextEditor4
             // 
             this.ultraTextEditor4.Location = new System.Drawing.Point(483, 119);
             this.ultraTextEditor4.Name = "ultraTextEditor4";
             this.ultraTextEditor4.Size = new System.Drawing.Size(219, 24);
-            this.ultraTextEditor4.TabIndex = 26;
+            this.ultraTextEditor4.TabIndex = 16;
+            this.ultraTextEditor4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ultraTextEditor4_KeyDown);
             // 
             // ultraTextEditor5
             // 
             this.ultraTextEditor5.Location = new System.Drawing.Point(483, 192);
             this.ultraTextEditor5.Name = "ultraTextEditor5";
             this.ultraTextEditor5.Size = new System.Drawing.Size(219, 24);
-            this.ultraTextEditor5.TabIndex = 25;
+            this.ultraTextEditor5.TabIndex = 17;
+            this.ultraTextEditor5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ultraTextEditor5_KeyDown);
             // 
             // ultraTextEditor6
             // 
             this.ultraTextEditor6.Location = new System.Drawing.Point(483, 265);
             this.ultraTextEditor6.Name = "ultraTextEditor6";
             this.ultraTextEditor6.Size = new System.Drawing.Size(219, 24);
-            this.ultraTextEditor6.TabIndex = 24;
+            this.ultraTextEditor6.TabIndex = 18;
+            this.ultraTextEditor6.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ultraTextEditor6_KeyDown);
             // 
             // ultraFormattedLinkLabel5
             // 
@@ -183,7 +191,7 @@
             this.ultraFormattedLinkLabel5.Margin = new System.Windows.Forms.Padding(4);
             this.ultraFormattedLinkLabel5.Name = "ultraFormattedLinkLabel5";
             this.ultraFormattedLinkLabel5.Size = new System.Drawing.Size(52, 28);
-            this.ultraFormattedLinkLabel5.TabIndex = 23;
+            this.ultraFormattedLinkLabel5.TabIndex = 19;
             this.ultraFormattedLinkLabel5.TabStop = true;
             this.ultraFormattedLinkLabel5.Value = "Email :";
             // 
@@ -193,7 +201,7 @@
             this.ultraFormattedLinkLabel6.Margin = new System.Windows.Forms.Padding(4);
             this.ultraFormattedLinkLabel6.Name = "ultraFormattedLinkLabel6";
             this.ultraFormattedLinkLabel6.Size = new System.Drawing.Size(52, 28);
-            this.ultraFormattedLinkLabel6.TabIndex = 22;
+            this.ultraFormattedLinkLabel6.TabIndex = 20;
             this.ultraFormattedLinkLabel6.TabStop = true;
             this.ultraFormattedLinkLabel6.Value = "Name:";
             // 

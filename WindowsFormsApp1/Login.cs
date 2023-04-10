@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp1
@@ -11,7 +12,8 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-        string salt = "huy123456";
+        string[] salt = File.ReadAllLines(@"C:\Users\ADMIN\Downloads\test.txt");
+
         //private static bool MatchSHA1(byte[] p1, byte[] p2)
         //{
         //    bool result = false;
@@ -32,7 +34,9 @@ namespace WindowsFormsApp1
         //    }
         //    return result;
         //}
-        public static string sha256(string pw, string salt)
+        
+        //sha256 password hashcode
+        public static string sha256(string pw, string[] salt)
         {
             System.Security.Cryptography.SHA256Managed sha256 = new System.Security.Cryptography.SHA256Managed();
             byte[] hash = sha256.ComputeHash(System.Text.Encoding.UTF8.GetBytes(pw + salt));
@@ -66,8 +70,9 @@ namespace WindowsFormsApp1
                     //check the data in sql if the username or password it correct or not
                     if (dataTable.Rows.Count > 0)
                     {
-                        new UserData().Show();
                         this.Hide();
+                        Form ud = new UserData(dataTable.Rows[0][0].ToString(), dataTable.Rows[0][1].ToString(), dataTable.Rows[0][2].ToString(), dataTable.Rows[0][3].ToString(), dataTable.Rows[0][6].ToString());
+                        ud.Show();
                     }
                     else
                     {
@@ -87,6 +92,29 @@ namespace WindowsFormsApp1
             this.Hide();
         }
 
+        private void ultraTextEditor1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                ultraButton3.Focus();
+            }
+            if (e.KeyCode==Keys.Down)
+            {
+                ultraTextEditor2.Focus();
+            }    
+        }
+
+        private void ultraTextEditor2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                ultraTextEditor1.Focus();
+            }
+            if (e.KeyCode == Keys.Down)
+            {
+                ultraButton1.Focus();
+            }
+        }
     }
 }
 ;

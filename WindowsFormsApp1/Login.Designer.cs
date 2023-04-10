@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
             this.ultraPictureBox2 = new Infragistics.Win.UltraWinEditors.UltraPictureBox();
             this.ultraPictureBox1 = new Infragistics.Win.UltraWinEditors.UltraPictureBox();
             this.ultraFormattedLinkLabel2 = new Infragistics.Win.FormattedLinkLabel.UltraFormattedLinkLabel();
@@ -116,6 +116,7 @@
             this.ultraTextEditor1.Name = "ultraTextEditor1";
             this.ultraTextEditor1.Size = new System.Drawing.Size(212, 21);
             this.ultraTextEditor1.TabIndex = 17;
+            this.ultraTextEditor1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ultraTextEditor1_KeyDown);
             // 
             // ultraTextEditor2
             // 
@@ -124,6 +125,7 @@
             this.ultraTextEditor2.PasswordChar = '*';
             this.ultraTextEditor2.Size = new System.Drawing.Size(212, 21);
             this.ultraTextEditor2.TabIndex = 18;
+            this.ultraTextEditor2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ultraTextEditor2_KeyDown);
             // 
             // ultraLabel1
             // 
@@ -135,8 +137,8 @@
             // 
             // ultraFormattedLinkLabel3
             // 
-            appearance1.ForeColor = System.Drawing.Color.Blue;
-            this.ultraFormattedLinkLabel3.Appearance = appearance1;
+            appearance2.ForeColor = System.Drawing.Color.Blue;
+            this.ultraFormattedLinkLabel3.Appearance = appearance2;
             this.ultraFormattedLinkLabel3.Location = new System.Drawing.Point(396, 394);
             this.ultraFormattedLinkLabel3.Name = "ultraFormattedLinkLabel3";
             this.ultraFormattedLinkLabel3.Size = new System.Drawing.Size(130, 23);

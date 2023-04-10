@@ -4,19 +4,20 @@ using System.Data;
 using System.Windows.Forms;
 using Infragistics.Win.UltraWinEditors;
 using System.Text;
+using System.IO;
 
 namespace WindowsFormsApp1
 {
     public partial class SignUp : Form
     {
-    string salt = "huy123456";
+        string[] salt = File.ReadAllLines(@"C:\Users\ADMIN\Downloads\test.txt");
         public SignUp()
         {
             InitializeComponent();
 
         }
 
-        public static string sha256(string pw, string salt)
+        public static string sha256(string pw, string[] salt)
         {
             System.Security.Cryptography.SHA256Managed sha256 = new System.Security.Cryptography.SHA256Managed();
             byte[] hash = sha256.ComputeHash(System.Text.Encoding.UTF8.GetBytes(pw + salt));
@@ -108,12 +109,13 @@ namespace WindowsFormsApp1
                 conn.Open();
                 SqlCommand cmd2 =new SqlCommand(sql, conn);
                 cmd2.Parameters.AddWithValue("@username", ultraTextEditor3.Text);
-                cmd2.Parameters.AddWithValue("@password", sha256(ultraTextEditor1.Text,salt));
+                cmd2.Parameters.AddWithValue("@password", sha256(ultraTextEditor1.Text, salt));
                 cmd2.Parameters.AddWithValue("@name", ultraTextEditor5.Text);
                 cmd2.Parameters.AddWithValue("@lastname", ultraTextEditor4.Text);
                 cmd2.Parameters.AddWithValue("@email", ultraTextEditor6.Text);
                 cmd2.ExecuteNonQuery();//execute command and save the account to the Db
                 MessageBox.Show("Username have create", "Caption", btn, icon);
+                conn.Close();
             }
         }
 
@@ -126,6 +128,141 @@ namespace WindowsFormsApp1
             ultraTextEditor5.Clear();
             ultraTextEditor6.Clear();
 
+        }
+
+        private void ultraTextEditor3_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Left)
+            {
+                ultraTextEditor4.Focus();
+            }
+            if (e.KeyCode == Keys.Right)
+            {
+                ultraTextEditor4.Focus();
+            }
+            if (e.KeyCode == Keys.Down)
+            {
+                ultraTextEditor1.Focus();
+            }
+            if (e.KeyCode == Keys.Up)
+            {
+                ultraButton3.Focus();
+            }
+        }
+
+        private void ultraTextEditor1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Left)
+            {
+                ultraTextEditor5.Focus();
+            }
+            if (e.KeyCode == Keys.Right)
+            {
+                ultraTextEditor5.Focus();
+            }
+            if (e.KeyCode == Keys.Down)
+            {
+                ultraTextEditor2.Focus();
+            }
+            if (e.KeyCode == Keys.Up)
+            {
+                ultraTextEditor3.Focus();
+            }
+        }
+        private void ultraTextEditor2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Left)
+            {
+                ultraTextEditor6.Focus();
+            }
+            if (e.KeyCode == Keys.Right)
+            {
+                ultraTextEditor6.Focus();
+            }
+            if (e.KeyCode == Keys.Up)
+            {
+                ultraTextEditor1.Focus();
+            }
+            if (e.KeyCode == Keys.Down)
+            {
+                ultraButton1.Focus();
+            }
+        }
+        private void ultraTextEditor4_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Left)
+            {
+                ultraTextEditor3.Focus();
+            }
+            if (e.KeyCode == Keys.Right)
+            {
+                ultraTextEditor3.Focus();
+            }
+            if (e.KeyCode == Keys.Down)
+            {
+                ultraTextEditor5.Focus();
+            }
+            if (e.KeyCode == Keys.Up)
+            {
+                ultraButton3.Focus();
+            }
+        }
+
+        private void ultraTextEditor5_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Left)
+            {
+                ultraTextEditor1.Focus();
+            }
+            if (e.KeyCode == Keys.Right)
+            {
+                ultraTextEditor1.Focus();
+            }
+            if (e.KeyCode == Keys.Down)
+            {
+                ultraTextEditor6.Focus();
+            }
+            if (e.KeyCode == Keys.Up)
+            {
+                ultraTextEditor4.Focus();
+            }
+        }
+
+        private void ultraTextEditor6_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Left)
+            {
+                ultraTextEditor2.Focus();
+            }
+            if (e.KeyCode == Keys.Right)
+            {
+                ultraTextEditor2.Focus();
+            }
+            if (e.KeyCode == Keys.Up)
+            {
+                ultraTextEditor5.Focus();
+            }
+            if (e.KeyCode == Keys.Down)
+            {
+                ultraButton1.Focus();
+            }
+        }
+
+
+        private void ultraButton3_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Down)
+            {
+                ultraTextEditor3.Focus();
+            }
+        }
+
+        private void ultraButton1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                ultraTextEditor6.Focus();
+            }
         }
     }
 }
